@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bright Future Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/906/906175.png">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s ease-out;
+    }
+    [data-animate].active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #1d4ed8;
+      color: white;
+      border: none;
+      padding: 12px 14px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+    #scrollTopBtn:hover {
+      background-color: #1e40af;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- ===== Navbar ===== -->
+  <header class="fixed w-full bg-white shadow-md z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-2xl font-bold text-blue-700">Bright Future Academy</h1>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="#home" class="hover:text-blue-600">Home</a>
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#services" class="hover:text-blue-600">Programs</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </nav>
+      <a href="https://wa.me/231779359698" target="_blank" class="md:hidden bg-blue-600 text-white px-4 py-2 rounded-lg text-sm">WhatsApp</a>
+    </div>
+  </header>
+
+  <!-- ===== Hero Section ===== -->
+  <section id="home" class="h-screen bg-blue-700 text-white flex flex-col justify-center items-center text-center px-4">
+    <h2 class="text-4xl md:text-6xl font-bold mb-4" data-animate>Welcome to Bright Future Academy</h2>
+    <p class="text-lg md:text-xl mb-6 max-w-2xl" data-animate>
+      Shaping tomorrow’s leaders through excellence in education, discipline, and creativity.
+    </p>
+    <a href="#contact" class="bg-white text-blue-700 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition" data-animate>
+      Enroll Now
+    </a>
+  </section>
+
+  <!-- ===== About Section ===== -->
+  <section id="about" class="py-20 bg-gray-50" data-animate>
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold text-blue-700 mb-6">About Us</h3>
+      <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+        At Bright Future Academy, we believe in nurturing young minds with knowledge, moral values, and creativity.
+        Our dedicated teachers and modern learning environment help students achieve academic success and build character for a brighter future.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Programs / Services Section ===== -->
+  <section id="services" class="py-20" data-animate>
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold text-blue-700 mb-12">Our Academic Programs</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white shadow-lg rounded-xl p-8 hover:shadow-2xl transition">
+          <h4 class="text-xl font-semibold text-blue-700 mb-3">Nursery & Kindergarten</h4>
+          <p class="text-gray-600">A fun, safe, and creative space for early learners to develop essential skills and confidence.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-xl p-8 hover:shadow-2xl transition">
+          <h4 class="text-xl font-semibold text-blue-700 mb-3">Primary Education</h4>
+          <p class="text-gray-600">Strong academic foundation with focus on reading, science, math, and personal growth.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-xl p-8 hover:shadow-2xl transition">
+          <h4 class="text-xl font-semibold text-blue-700 mb-3">Junior & Senior High</h4>
+          <p class="text-gray-600">Preparing students for national exams and future success through modern teaching methods.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Gallery Section ===== -->
+  <section id="portfolio" class="py-20 bg-gray-50" data-animate>
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold text-blue-700 mb-12">Campus Life</h3>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <img src="https://source.unsplash.com/400x300/?school,classroom" class="rounded-lg shadow-md hover:scale-105 transition" alt="">
+        <img src="https://source.unsplash.com/400x300/?students,learning" class="rounded-lg shadow-md hover:scale-105 transition" alt="">
+        <img src="https://source.unsplash.com/400x300/?education,library" class="rounded-lg shadow-md hover:scale-105 transition" alt="">
+        <img src="https://source.unsplash.com/400x300/?teacher,student" class="rounded-lg shadow-md hover:scale-105 transition" alt="">
+        <img src="https://source.unsplash.com/400x300/?school,building" class="rounded-lg shadow-md hover:scale-105 transition" alt="">
+        <img src="https://source.unsplash.com/400x300/?students,books" class="rounded-lg shadow-md hover:scale-105 transition" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section id="contact" class="py-20" data-animate>
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold text-blue-700 mb-6">Contact Us</h3>
+      <p class="text-gray-700 mb-8">We’d love to hear from you! Reach out for admissions, inquiries, or partnerships.</p>
+
+      <form action="https://formspree.io/f/your_form_id" method="POST" class="grid md:grid-cols-2 gap-6 text-left">
+        <input type="text" name="name" placeholder="Your Name" required class="border border-gray-300 rounded-lg px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <input type="email" name="email" placeholder="Your Email" required class="border border-gray-300 rounded-lg px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <textarea name="message" rows="4" placeholder="Your Message" required class="md:col-span-2 border border-gray-300 rounded-lg px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        <button class="md:col-span-2 bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition font-semibold">Send Message</button>
+      </form>
+      <p class="mt-3 text-sm text-gray-500">Messages will be sent to jerryyowateh@gmail.com</p>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="bg-blue-700 text-white py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-center gap-4">
+      <p>&copy; 2025 Bright Future Academy. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://wa.me/231779359698" target="_blank" class="bg-green-500 p-2 rounded-full"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" class="w-5 h-5" alt=""></a>
+        <a href="#" class="bg-blue-500 p-2 rounded-full"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" class="w-5 h-5" alt=""></a>
+        <a href="#" class="bg-pink-500 p-2 rounded-full"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" class="w-5 h-5" alt=""></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Scroll-to-Top Button ===== -->
+  <button id="scrollTopBtn" title="Back to Top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // Animation
+    const animateElements = document.querySelectorAll("[data-animate]");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("active");
+      });
+    }, { threshold: 0.2 });
+    animateElements.forEach(el => observer.observe(el));
+
+    // Scroll to Top Button
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = () => {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+    scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  </script>
+
+</body>
+</html>

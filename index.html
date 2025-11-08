@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenLand Gardens</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"/>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      header.scrolled {
+        background-color: white !important;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="text-gray-800">
+    <!-- Header -->
+<header id="header" class="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+  <!-- Top Info Bar -->
+  <div class="bg-green-700 text-white text-sm">
+    <div
+      class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 py-2 gap-2">
+      <div
+        class="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
+        <div class="flex items-center gap-2">
+          <i data-lucide="phone" class="w-4 h-4"></i>
+          <span>+231 779 359 698</span>
+        </div>
+        <div class="hidden sm:block h-4 w-px bg-white/40"></div>
+        <div class="flex items-center gap-2">
+          <i data-lucide="map-pin" class="w-4 h-4"></i>
+          <span>Monrovia, Liberia</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="#" class="hover:text-green-200"
+          ><i data-lucide="facebook" class="w-4 h-4"></i></a>
+        <a href="#" class="hover:text-green-200"
+          ><i data-lucide="instagram" class="w-4 h-4"></i></a>
+        <a
+          href="https://wa.me/231779359698"
+          target="_blank"
+          class="hover:text-green-200">
+          <i data-lucide="message-circle" class="w-4 h-4"></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- Main Navbar -->
+  <nav class="bg-white">
+    <div
+      class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#home" class="flex items-center gap-2">
+        <div
+          class="h-10 w-10 bg-green-700 rounded-full flex items-center justify-center text-white">
+          <i data-lucide="leaf" class="w-5 h-5"></i>
+        </div>
+        <span class="font-bold text-xl text-green-700 tracking-wide"
+          >XTRA GARDEN</span>
+      </a>
+      <!-- Desktop Menu -->
+      <ul
+        class="hidden md:flex items-center gap-6 text-slate-700 font-medium">
+        <li><a href="#home" class="hover:text-green-700">Home</a></li>
+        <li><a href="#gardening" class="hover:text-green-700">Gardening</a></li>
+        <li><a href="#services" class="hover:text-green-700">Services</a></li>
+        <li><a href="#projects" class="hover:text-green-700">Projects</a></li>
+        <li><a href="#blog" class="hover:text-green-700">Blog</a></li>
+        <li><a href="#shop" class="hover:text-green-700">Shop</a></li>
+        <li><a href="#contact" class="hover:text-green-700">Contact</a></li>
+      </ul>
+      <!-- WhatsApp Button -->
+      <div class="hidden md:block">
+        <a
+          href="https://wa.me/231779359698"
+          target="_blank"
+          class="inline-flex items-center gap-2 bg-green-700 text-white px-4 py-2 rounded-md hover:bg-green-800 transition">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          Contact on WhatsApp
+        </a>
+      </div>
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-green-700">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t shadow-sm">
+      <ul class="flex flex-col text-slate-700 font-medium px-6 py-4 space-y-3">
+        <li><a href="#home" class="hover:text-green-700">Home</a></li>
+        <li><a href="#gardening" class="hover:text-green-700">Gardening</a></li>
+        <li><a href="#services" class="hover:text-green-700">Services</a></li>
+        <li><a href="#projects" class="hover:text-green-700">Projects</a></li>
+        <li><a href="#blog" class="hover:text-green-700">Blog</a></li>
+        <li><a href="#shop" class="hover:text-green-700">Shop</a></li>
+        <li><a href="#contact" class="hover:text-green-700">Contact</a></li>
+        <li>
+          <a
+            href="https://wa.me/231779359698"
+            target="_blank"
+            class="flex items-center gap-2 bg-green-700 text-white justify-center py-2 rounded-md mt-2 hover:bg-green-800">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            Contact on WhatsApp
+          </a>
+        </li>
+      </ul>
+    </div>
+   </nav>
+   </header>
+   <!-- Hero Section -->
+<section id="home" class="relative h-[100vh] overflow-hidden group">
+  <!-- Slides -->
+  <div id="hero-slides" class="absolute inset-0">
+    <div
+      class="slide absolute inset-0 bg-cover bg-center opacity-100 transition-opacity duration-1000"
+      style="background-image: url('assets/GettyImages-1333988606-9ad7bca481d24006ab5c83244a6084e9.jpg');"
+      data-title="Welcome to XTRA Garden"
+      data-subtitle="Transform your space with our professional gardening, landscaping, and plant care services."></div>
+    <div
+      class="slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000"
+      style="background-image: url('assets/download\ 2.jpeg');"
+      data-title="Nature Meets Perfection"
+      data-subtitle="We bring life, color, and beauty to your home and outdoor spaces."></div>
+    <div
+      class="slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000"
+      style="background-image: url('assets/download\ 3.jpeg');"
+      data-title="Grow with XTRA Garden"
+      data-subtitle="Your trusted partner in sustainable garden design and maintenance."></div>
+  </div>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-green-900/60"></div>
+  <!-- Text Content -->
+  <div
+    id="hero-text"
+    class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6 transition-all duration-700">
+    <h1 id="hero-title" class="text-4xl sm:text-6xl font-bold mb-4 opacity-0 translate-y-5 transition-all duration-700">
+      Welcome to XTRA Gardening
+    </h1>
+    <p id="hero-subtitle" class="text-lg sm:text-xl mb-8 max-w-2xl opacity-0 translate-y-5 transition-all duration-700">
+      Transform your space with our professional gardening, landscaping, and plant care services.
+    </p>
+    <a
+      href="https://wa.me/231779359698"
+      target="_blank"
+      class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg transition">
+      Contact on WhatsApp
+    </a>
+  </div>
+</section>
+<!-- Rotation + Text Animation Script -->
+<script>
+  const slides = document.querySelectorAll(".slide");
+  const title = document.querySelector("#hero-title");
+  const subtitle = document.querySelector("#hero-subtitle");
+  const hero = document.querySelector("#home");
+  let index = 0;
+  let interval;
+  function showText(slide) {
+    // Fade out old text
+    title.classList.add("opacity-0", "translate-y-5");
+    subtitle.classList.add("opacity-0", "translate-y-5");
+    setTimeout(() => {
+      // Update and fade in new text
+      title.textContent = slide.dataset.title;
+      subtitle.textContent = slide.dataset.subtitle;
+      title.classList.remove("opacity-0", "translate-y-5");
+      subtitle.classList.remove("opacity-0", "translate-y-5");
+    }, 700);
+  }
+  function startRotation() {
+    interval = setInterval(() => {
+      slides[index].classList.remove("opacity-100");
+      slides[index].classList.add("opacity-0");
+      index = (index + 1) % slides.length;
+      slides[index].classList.remove("opacity-0");
+      slides[index].classList.add("opacity-100");
+      showText(slides[index]);
+    }, 6000);
+  }
+  function stopRotation() {
+    clearInterval(interval);
+  }
+  hero.addEventListener("mouseenter", stopRotation);
+  hero.addEventListener("mouseleave", startRotation);
+  // Start animation
+  showText(slides[index]);
+  startRotation();
+</script>
+    <!-- Gardening Section -->
+    <section id="gardening" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6 text-green-700">Our Gardening</h2>
+        <p class="max-w-2xl mx-auto mb-12">
+          From planting and irrigation to lawn care and tree pruning — we keep
+          your garden healthy and green all year round.
+        </p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+            <img
+              src="assets/GettyImages-1272234265-94e5659f869a4e8b89d7fd3f82c57a54.webp"
+              alt="Planting"
+              class="rounded-lg mb-4"/>
+            <h3 class="text-xl font-semibold mb-2">Planting & Design</h3>
+            <p class="text-gray-600">
+              Creative layouts and professional planting for stunning results.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+            <img
+              src="assets/GettyImages-157400141-46395428753c4c46a93376b1e9aa1323.webp"
+              alt="Maintenance"
+              class="rounded-lg mb-4"/>
+            <h3 class="text-xl font-semibold mb-2">Maintenance</h3>
+            <p class="text-gray-600">
+              Regular care services to keep your garden fresh and alive.</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+            <img
+              src="assets/p7-1.jpg"
+              alt="Irrigation"
+              class="rounded-lg mb-4"/>
+            <h3 class="text-xl font-semibold mb-2">Irrigation Systems</h3>
+            <p class="text-gray-600">
+              Smart watering systems designed to save water and time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Projects / Gallery Section -->
+<section id="projects" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold text-green-700 mb-4">
+      Our Recent Projects
+    </h2>
+    <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
+      Explore some of our latest gardening and landscaping projects that bring
+      nature’s beauty closer to your home.</p>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Project 1 -->
+      <div class="relative group overflow-hidden rounded-2xl shadow-md">
+        <img
+          src="assets/download 1.jpeg"
+          alt="Project 1"
+          class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"/>
+        <div class="absolute inset-0 bg-green-900/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+          <h3 class="text-white text-lg font-semibold">Front Yard Makeover</h3>
+        </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="relative group overflow-hidden rounded-2xl shadow-md">
+        <img
+          src="assets/download 2.jpeg"
+          alt="Project 2"
+          class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"/>
+        <div class="absolute inset-0 bg-green-900/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+          <h3 class="text-white text-lg font-semibold">Backyard Landscaping</h3>
+        </div>
+      </div>
+      <!-- Project 3 -->
+      <div class="relative group overflow-hidden rounded-2xl shadow-md">
+        <img
+          src="assets/download 3.jpeg"
+          alt="Project 3"
+          class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"/>
+        <div class="absolute inset-0 bg-green-900/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+          <h3 class="text-white text-lg font-semibold">Garden Path Design</h3>
+        </div>
+      </div>
+      <!-- Project 4 -->
+      <div class="relative group overflow-hidden rounded-2xl shadow-md">
+        <img
+          src="assets/images (1).jpeg"
+          alt="Project 4"
+          class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"/>
+        <div class="absolute inset-0 bg-green-900/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+          <h3 class="text-white text-lg font-semibold">Tree Maintenance</h3>
+        </div>
+      </div>
+      <!-- Project 5 -->
+      <div class="relative group overflow-hidden rounded-2xl shadow-md">
+        <img
+          src="assets/images.jpeg"
+          alt="Project 5"
+          class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"/>
+        <div class="absolute inset-0 bg-green-900/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+          <h3 class="text-white text-lg font-semibold">Flower Bed Setup</h3>
+        </div>
+      </div>
+      <!-- Project 6 -->
+      <div class="relative group overflow-hidden rounded-2xl shadow-md">
+        <img
+          src="assets/images (2).jpeg"
+          alt="Project 6"
+          class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"/>
+        <div class="absolute inset-0 bg-green-900/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+          <h3 class="text-white text-lg font-semibold">Outdoor Garden Setup</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Blog Section -->
+<section id="blog" class="py-20 bg-green-50">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold text-green-700 mb-4">
+      Latest From Our Blog
+    </h2>
+    <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
+      Get tips, inspiration, and the latest trends in gardening and landscaping from our experts.</p>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Blog Post 1 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:-translate-y-2 transition-transform">
+        <img
+          src="assets/download 4.jpeg"
+          alt="Blog 1"
+          class="w-full h-56 object-cover"/>
+        <div class="p-6 text-left">
+          <p class="text-sm text-green-600 font-semibold mb-2">Oct 20, 2025</p>
+          <h3 class="text-xl font-semibold text-green-700 mb-3">
+            How to Keep Your Lawn Healthy All Year
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Learn professional techniques for mowing, watering, and maintaining your garden lawn.</p>
+          <a
+            href="#"
+            class="inline-block text-green-700 font-semibold hover:underline"
+            >Read More →</a>
+        </div>
+      </div>
+      <!-- Blog Post 2 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:-translate-y-2 transition-transform">
+        <img
+          src="assets/download 5.jpeg"
+          alt="Blog 2"
+          class="w-full h-56 object-cover"/>
+        <div class="p-6 text-left">
+          <p class="text-sm text-green-600 font-semibold mb-2">Oct 10, 2025</p>
+          <h3 class="text-xl font-semibold text-green-700 mb-3">
+            5 Creative Landscaping Ideas for Small Spaces
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Discover innovative design tips to transform even the smallest garden into a green paradise.
+          </p>
+          <a
+            href="#"
+            class="inline-block text-green-700 font-semibold hover:underline"
+            >Read More →</a>
+        </div>
+      </div>
+      <!-- Blog Post 3 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:-translate-y-2 transition-transform">
+        <img
+          src="assets/download 6.jpeg"
+          alt="Blog 3"
+          class="w-full h-56 object-cover"/>
+        <div class="p-6 text-left">
+          <p class="text-sm text-green-600 font-semibold mb-2">Sep 25, 2025</p>
+          <h3 class="text-xl font-semibold text-green-700 mb-3">
+            Best Flower Combinations for a Vibrant Garden
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Explore color combinations and planting strategies to keep your garden blooming all season.
+          </p>
+          <a
+            href="#"
+            class="inline-block text-green-700 font-semibold hover:underline"
+            >Read More →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Services Section -->
+<section id="services" class="py-20 bg-green-50">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold text-green-700 mb-4">
+      Our Gardening Services
+    </h2>
+    <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
+      We provide a wide range of professional gardening and landscaping services to
+      keep your outdoor space looking fresh, vibrant, and full of life.
+    </p>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Service 1 -->
+      <div class="bg-white rounded-2xl shadow-md p-8 hover:-translate-y-2 transition-transform">
+        <div class="flex items-center justify-center h-16 w-16 mx-auto bg-green-700 text-white rounded-full mb-6">
+          <i data-lucide="sprout" class="w-8 h-8"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-green-700 mb-3">Lawn Care</h3>
+        <p class="text-gray-600">
+          Keep your garden lawn healthy and beautiful with our mowing, trimming, and fertilization services.
+        </p>
+      </div>
+      <!-- Service 2 -->
+      <div class="bg-white rounded-2xl shadow-md p-8 hover:-translate-y-2 transition-transform">
+        <div class="flex items-center justify-center h-16 w-16 mx-auto bg-green-700 text-white rounded-full mb-6">
+          <i data-lucide="flower" class="w-8 h-8"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-green-700 mb-3">Planting & Maintenance</h3>
+        <p class="text-gray-600">
+          From flowerbeds to trees, we plant and nurture every green element to perfection.
+        </p>
+      </div>
+      <!-- Service 3 -->
+      <div class="bg-white rounded-2xl shadow-md p-8 hover:-translate-y-2 transition-transform">
+        <div class="flex items-center justify-center h-16 w-16 mx-auto bg-green-700 text-white rounded-full mb-6">
+          <i data-lucide="tree-deciduous" class="w-8 h-8"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-green-700 mb-3">Landscape Design</h3>
+        <p class="text-gray-600">
+          Transform your outdoor environment into a natural masterpiece with our creative design services.
+        </p>
+      </div>
+    </div>
+   </div>
+   </section>
+    <!-- Shop Section -->
+    <section id="shop" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6 text-green-700">Shop Gardening Tools</h2>
+        <p class="max-w-2xl mx-auto mb-12">
+          Premium tools and plants to keep your garden flourishing.
+        </p>
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+            <img src="assets/download 7.jpeg" class="rounded-lg mb-4" />
+            <h3 class="font-semibold">Garden Shovels</h3>
+            <p class="text-green-700 font-bold mb-2">$18.99</p>
+            <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">Add to Cart</button>
+          </div>
+          <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+            <img src="assets/images (5).jpeg" class="rounded-lg mb-4" />
+            <h3 class="font-semibold">Watering Can</h3>
+            <p class="text-green-700 font-bold mb-2">$22.50</p>
+            <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">Add to Cart</button>
+          </div>
+          <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+            <img src="assets/images (4).jpeg" class="rounded-lg mb-4" />
+            <h3 class="font-semibold">Garden Gloves</h3>
+            <p class="text-green-700 font-bold mb-2">$9.99</p>
+            <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">Add to Cart</button>
+          </div>
+          <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+            <img src="assets/download 8.jpeg" class="rounded-lg mb-4" />
+            <h3 class="font-semibold">wheel barrow</h3>
+            <p class="text-green-700 font-bold mb-2">$29.00</p>
+            <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+        <!-- Contact Section -->
+   <section id="contact" class="py-20 bg-green-700 text-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Contact Us</h2>
+      <p class="text-green-100 max-w-2xl mx-auto">
+        We’d love to hear from you! Whether you have a question, need a quote, or
+        want to discuss your garden project, feel free to reach out.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-12">
+      <!-- Contact Form -->
+      <form
+        action="https://formspree.io/f/your-form-id"
+        method="POST"
+        class="bg-white text-gray-800 rounded-2xl shadow-md p-8">
+        <div class="mb-6">
+          <label for="name" class="block font-medium mb-2">Full Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            required
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 outline-none"
+            placeholder="Enter your full name"/>
+        </div>
+        <div class="mb-6">
+          <label for="email" class="block font-medium mb-2">Email Address</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 outline-none"
+            placeholder="Enter your email"/>
+        </div>
+        <div class="mb-6">
+          <label for="message" class="block font-medium mb-2">Message</label>
+          <textarea
+            name="message"
+            id="message"
+            rows="4"
+            required
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 outline-none"
+            placeholder="Write your message..."></textarea>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-green-700 text-white py-3 rounded-lg font-semibold hover:bg-green-800 transition">
+          Send Message
+        </button>
+      </form>
+      <!-- Contact Information -->
+      <div class="space-y-6 text-green-50">
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">Get in Touch</h3>
+          <p class="text-green-100 mb-2">
+            We’re always ready to transform your outdoor spaces into something beautiful.
+          </p>
+        </div>
+        <div class="flex items-start space-x-4">
+          <i data-lucide="phone" class="w-6 h-6"></i>
+            <strong>phone:</strong>
+            <a
+              href="+231779359698"
+              target="_blank"
+              class="underline hover:text-green-200"
+              >+231779359698</a>
+          </p>
+        </div>
+        <div class="flex items-start space-x-4">
+          <i data-lucide="message-circle" class="w-6 h-6"></i>
+          <p>
+            <strong>WhatsApp:</strong>
+            <a
+              href="https://wa.me/231779359698"
+              target="_blank"
+              class="underline hover:text-green-200"
+              >Chat on WhatsApp</a>
+          </p>
+        </div>
+        <div class="flex items-start space-x-4">
+          <i data-lucide="mail" class="w-6 h-6"></i>
+          <p><strong>Email:</strong>jerryyowateh@gmail.com</p>
+        </div>
+        <div class="flex items-start space-x-4">
+          <i data-lucide="map-pin" class="w-6 h-6"></i>
+          <p><strong>Location:</strong> Monrovia, Liberia</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+<!--Footer Section -->
+<footer class="bg-green-800 text-green-100 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+    <!-- Brand Info -->
+    <div>
+      <h2 class="text-2xl font-bold text-white mb-4">GreenLand Gardens</h2>
+      <p class="text-green-200 mb-4">
+        Transforming outdoor spaces into lush, peaceful, and inspiring environments.
+        Your garden, our passion.
+      </p>
+      <a
+        href="https://wa.me/231779359698"
+        target="_blank"
+        class="inline-flex items-center space-x-2 text-green-200 hover:text-white">
+        <i data-lucide="message-circle" class="w-5 h-5"></i>
+        <span>Contact us on WhatsApp</span>
+      </a>
+    </div>
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-xl font-semibold text-white mb-4">Quick Links</h3>
+      <ul class="space-y-2">
+        <li><a href="#home" class="hover:text-white transition">Home</a></li>
+        <li><a href="#about" class="hover:text-white transition">About</a></li>
+        <li><a href="#services" class="hover:text-white transition">Services</a></li>
+        <li><a href="#projects" class="hover:text-white transition">Projects</a></li>
+        <li><a href="#shop" class="hover:text-white transition">Shop</a></li>
+        <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+      </ul>
+    </div>
+    <!-- Social Media -->
+    <div>
+      <h3 class="text-xl font-semibold text-white mb-4">Follow Us</h3>
+      <div class="flex space-x-4">
+        <a href="#" class="bg-green-700 hover:bg-green-600 p-3 rounded-full transition">
+          <i data-lucide="facebook" class="w-5 h-5 text-white"></i>
+        </a>
+        <a href="#" class="bg-green-700 hover:bg-green-600 p-3 rounded-full transition">
+          <i data-lucide="instagram" class="w-5 h-5 text-white"></i>
+        </a>
+        <a href="#" class="bg-green-700 hover:bg-green-600 p-3 rounded-full transition">
+          <i data-lucide="twitter" class="w-5 h-5 text-white"></i>
+        </a>
+        <a href="https://wa.me/231779359698" target="_blank" class="bg-green-700 hover:bg-green-600 p-3 rounded-full transition">
+          <i data-lucide="message-circle" class="w-5 h-5 text-white"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-green-700 mt-12 pt-6 text-center text-green-300 text-sm">
+    © 2025 GreenLand Gardens. All rights reserved. Designed with ❤️ by Jerry Yowateh.
+  </div>
+</footer>
+
+<!-- Initialize Lucide Icons -->
+<script>
+  lucide.createIcons();
+</script>
+<script>
+  // Mobile Menu Toggle
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+  // Load Lucide Icons
+  lucide.createIcons();
+</script>
+  </body>
+</html>
